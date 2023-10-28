@@ -1,5 +1,5 @@
 describe("Login and loyalty points verification", () => {
-  beforeEach(async () => {
+  before(async () => {
     //presionar el boton de menu dropdown por medio del atributo content description
     await $(
       '//android.widget.ImageButton[@content-desc="Show dropdown menu"]'
@@ -11,14 +11,13 @@ describe("Login and loyalty points verification", () => {
     //presionar el pais El Salvador por medio de coordenadas
     await driver.touchAction([{ action: "tap", x: 423, y: 1764.19 }]);
 
-     //presionar el boton de continuar
-     await $(
-        '//android.widget.FrameLayout[@resource-id="net.livinapp.lealtad:id/btnContinue"]'
-      ).click();
+    //presionar el boton de continuar
+    await $(
+      '//android.widget.FrameLayout[@resource-id="net.livinapp.lealtad:id/btnContinue"]'
+    ).click();
   });
-  
-  it("should  login with the corect credentials", async () => {
 
+  it("should  login with the corect credentials", async () => {
     //Ingresar el correo electronico
     await $(
       '//android.widget.EditText[@resource-id="net.livinapp.lealtad:id/email"]'
@@ -43,14 +42,43 @@ describe("Login and loyalty points verification", () => {
     //Buscar el elemento con texto Cerrar sesion
     const logOutElement = await $('//*[@text="Cerrar sesión"]');
 
-    //Obtener el texto 
+    //Obtener el texto
     const logOutText = await logOutElement.getText();
 
     //Realizar la asercion del texto
     expect(logOutText).toHaveText("Cerrar sesión");
-  });
 
-  it('should check loyalty points', async() => {
-    
+    //Cerrar sesion
+    logOutElement.click();
+  });
+  it("should check loyalty points", async () => {
+    //Ingresar el correo electronico
+    await $(
+      '//android.widget.EditText[@resource-id="net.livinapp.lealtad:id/email"]'
+    ).setValue("guillememo95@gmail.com");
+
+    //Ingresar la contraseña
+    await $(
+      '//android.widget.EditText[@resource-id="net.livinapp.lealtad:id/password"]'
+    ).setValue("12345678");
+
+    //Presionar el boton de acceder
+    await $('//android.widget.TextView[@text="Acceder"]').click();
+
+    //Presionar el boton "Ver todos"
+    await $(
+      '//android.widget.TextView[@resource-id="net.livinapp.lealtad:id/txvMorePlans"]'
+    ).click();
+
+    await driver.pause(1000)
+
+    //Busca el elemento de puntos
+    const textPointsElement = await $('//*[@text = "0 puntos"]');
+
+    //Obtiene el texto
+    const textPoints = textPointsElement.getText();
+
+    //Realiza asercion del texto
+    expect(textPoints).toHaveText("0 puntos");
   });
 });
