@@ -50,6 +50,7 @@ Haber iniciado sesión
 Pasos A Seguir:
 1- Dirigirte a la sección Mis Planes
 2- Pulsar la opción "Ver todos"
+3- Verificar los puntos del comercio
 
 
 Test Data
@@ -66,32 +67,60 @@ PASS
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-Caso De Prueba Manual 1: Validación Del Detalle De Vacaciones
+Caso De Prueba Manual 1: Validación De Notificaciones 
 
 ID
 AL001
 
 Descripción Del Caso De Prueba
-Verificar el detalle de vacaciones dentro del listado
+Verificar que las notificaciones desplieguen el historial de puntos de la aplicación
 
 Pre Requisitos:
 Haber iniciado sesión
 
 Pasos A Seguir:
-1- Dirigirse al apartado de listado de vacaciones.
-2- Hacer click en el detalle de vacaciones.
+1- Dirigirse al menú principal
+2- Pulsar en el icono de campana hubicado en la esquina superior derecha.
 
 
 Test Data
 N/A
 
 Resultados Esperados
-El Usuario debería verificar el detalle de sus vacaciones.
+El usuario debería verificar el historial de transacciones de puntos
 
 Resultados Actuales
-
+El usuario es capaz de ver el historial de transacciones de puntos
 
 Pass/Fail
-
+PASS
 ---------------------------------------------------------------------------------------------------------------------------------------
 
+Caso De Prueba Manual 2: Verificación De Categorías En La Página De Inicio
+
+ID
+AL002
+
+Descripción Del Caso De Prueba
+Verificar que existan mas de 4 categorías en la pagina de inicio
+
+Pre Requisitos:
+Haber iniciado sesión
+
+Pasos A Seguir:
+1- Dirigirse al menú principal
+2- Verificar la sección de categorias
+3- Verificar cuantas categorias se muestran.
+
+
+Test Data
+N/A
+
+Resultados Esperados
+El usuario debería visualizar al menos 4 categorias
+
+Resultados Actuales
+El usuario visualiza 2 categorias validas
+
+Pass/Fail
+FAIL
