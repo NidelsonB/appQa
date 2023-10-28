@@ -1,72 +1,75 @@
 Plan de pruebas para la aplciación de solicitudes de de vacaciones
 
-Este plan tiene como objetivo verificar la correcta funcionalidad de inicio de sesion y la visualizacion de solicitud de vacaciones.
+Este plan tiene como objetivo verificar la correcta funcionalidad de inicio de sesion y la visualizacion de puntos en comercios.
 
 Escenarios de pruebas automatizados: 
 
-Caso De Prueba Automatizado 1: Inicio De Sesión.
+Caso De Prueba Automatizado 1: Inicio De Sesión Exitoso.
 
 ID
-AV01
+AL01
 
 Descripción Del Caso De Prueba
 Verificar que un usuario puede iniciar sesion correctamente utilizando las credenciales correctos
 
+Pre Requisitos:
+Haber seleccionado El Salvador como pais de residencia.
+
 Pasos A Seguir:
 1- Abrir la aplicación.
-2- Dirigirse al campo de usuario e ingresarlo.
+2- Dirigirse al campo de correo electronico e ingresarlo.
 3- Dirigirse al campo de contraseña e ingresarla.
-4- Hacer click/tap al boton de "INGRESAR".
+4- Hacer click/tap al boton de "Acceder".
 
 
 Test Data
-Usuario: 
-Contraseña:
+Correo Electrónico: guillememo95@gmail.com
+Contraseña: 12345678
 
 Resultados Esperados
-El Usuario debería ingresar y tener acceso a las vacaciones.
+El Usuario debería ingresar y tener acceso a sus puntos de lealtad.
 
 Resultados Actuales
-Login no es efectivo
+Login es efectivo
 
 Pass/Fail
-FAIL.
+PASS.
 -----------------------------------------------------------------------------------------------------------------------------
 
-Caso De Prueba Automatizado 2: Verificación Del Listado de Vacaciones
+Caso De Prueba Automatizado 2: Verificación De Los Puntos
 
 ID
-AV02
+AL02
 
 Descripción Del Caso De Prueba
-Verificar que la lista de solicitudes de vacaciones se carga correctamente y muestra la información correcta.
+Verificar que la lista de comercios despliega los puntos disponibles
 
 Pre Requisitos:
 Haber iniciado sesión
 
 Pasos A Seguir:
-1- 
-2- 
+1- Dirigirte a la sección Mis Planes
+2- Pulsar la opción "Ver todos"
 
 
 Test Data
 N/A
 
 Resultados Esperados
-El Usuario debería verificar sus vacaciones y/o solicitudes.
+El usuario debería ver sus puntos.
 
 Resultados Actuales
-
+El usuario puede ver sus puntos
 
 Pass/Fail
-
+PASS
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
 Caso De Prueba Manual 1: Validación Del Detalle De Vacaciones
 
 ID
-AV001
+AL001
 
 Descripción Del Caso De Prueba
 Verificar el detalle de vacaciones dentro del listado
