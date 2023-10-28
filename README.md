@@ -1,6 +1,6 @@
 Test Tecnico para perfil de QA Automático
 
-Este proyecto tiene como objetivo automatizar las pruebas de la aplicación de solicitudes de vacaciones. Incluye escenarios de prueba para la funcionalidad de inicio de sesión y visualización de detalles de solicitudes.
+Este proyecto tiene como objetivo automatizar las pruebas de la aplicación de puntos de lealtad. Incluye escenarios de prueba para la funcionalidad de inicio de sesión y visualización de puntos de los comercios.
 
 Las pruebas han sido ejectuadas de forma automatica a través del framework test WebdriverIO y de la herramienta de automatización Appium. También utilizando un emulador de dispositivo Android (Android Studio), por medio
 del driver UIAutomator 2.
