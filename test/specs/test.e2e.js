@@ -5,8 +5,8 @@ describe("Login and loyalty points verification", () => {
       '//android.widget.ImageButton[@content-desc="Show dropdown menu"]'
     ).click();
 
-    //Esperar que cargue 2 segundos
-    await driver.pause(2000);
+    //Esperar que cargue 3 segundos
+    await driver.pause(3000);
 
     //presionar el pais El Salvador por medio de coordenadas
     await driver.touchAction([{ action: "tap", x: 423, y: 1764.19 }]);
